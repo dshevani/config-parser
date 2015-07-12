@@ -10,10 +10,6 @@ import java.util.List;
 import com.twitter.project.config.parser.ConfigParser;
 import com.twitter.project.config.source.ConfigSource;
 
-/**
- * @author deepak.shevani on Jul 11, 2015
- *
- */
 
 public abstract class Config {
     

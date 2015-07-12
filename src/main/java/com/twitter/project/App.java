@@ -6,15 +6,24 @@ import com.twitter.project.config.source.ConfigSource;
 
 /**
  * 
- * Lets assume a driver class Config that has load function which takes a file location and a parser.
- * It returns a Config object that has other functions to fetch confg values
- * There will be a class that will read the file from some path and store a BufferedInputStream 
- * Lets call it "ConfigSource"
- * Config.load will create ConfigSource first and then then call a function 
- * Config.parse(ConfigSource, SpecificParser) => SpecificConfig
- * 
- * 
- * @author deepak.shevani on Jul 11, 2015
+ * └── com
+ *     └── twitter
+ *        └── project
+ *            ├── App.java  (Main Driver Class)
+ *            └── config
+ *                ├── Config.java (Abstract Class representing Config Object)
+ *                ├── IniConfig.java (IniConfig instantiation)
+ *                ├── exception
+ *                │   └── InvalidFileFormatException.java (Exception Class - Not used right now)
+ *                ├── key
+ *                │   └── ConfigKey.java (Class representing key)
+ *                ├── parser
+ *                │   ├── ConfigParser.java (Parser Interface)
+ *                │   └── IniConfigParser.java (IniConfig Parser implementation)
+ *                ├── source
+ *                │   └── ConfigSource.java (Class representing source read from disk)
+ *                └── values
+ *                    └── ConfigValue.java (Class representing ordered value(s) associated with key)
  *
  */
 
@@ -29,7 +38,7 @@ public class App {
               new String[] { "ubuntu", "production" }
       );
       
-      // Get specific key
+      // Get specific key in group
       System.out.println("common.paid_users_size_limit" + " = " + firstConfig.get("common.paid_users_size_limit"));
       System.out.println("ftp.name" + " = " + firstConfig.get("ftp.name"));
       System.out.println("http.params" + " = " + firstConfig.get("http.params"));
