@@ -12,11 +12,6 @@ import com.twitter.project.config.key.ConfigKey;
 import com.twitter.project.config.values.ConfigValue;
 
 
-/**
- * @author deepak.shevani on Jul 11, 2015
- *
- */
-
 public class IniConfig extends Config {
   
   // Holds INI configuration object : Map < group , Map < key , value(s) > >

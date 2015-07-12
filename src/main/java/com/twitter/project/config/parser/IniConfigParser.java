@@ -8,12 +8,6 @@ import java.util.regex.Pattern;
 import com.twitter.project.config.Config;
 import com.twitter.project.config.IniConfig;
 
-
-/**
- * @author deepak.shevani on Jul 11, 2015
- *
- */
-
 public class IniConfigParser implements ConfigParser {
   
   private static Pattern group  = Pattern.compile( "\\[([^]]*)\\]" );

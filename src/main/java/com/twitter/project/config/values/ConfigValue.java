@@ -4,11 +4,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author deepak.shevani on Jul 11, 2015
- *
- */
-
 public class ConfigValue<T> {
     
   private T defaultValue;

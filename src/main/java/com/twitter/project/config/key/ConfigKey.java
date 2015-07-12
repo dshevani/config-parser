@@ -1,11 +1,5 @@
 package com.twitter.project.config.key;
 
-
-/**
- * @author deepak.shevani on Jul 11, 2015
- *
- */
-
 public class ConfigKey {
   
   String name;
